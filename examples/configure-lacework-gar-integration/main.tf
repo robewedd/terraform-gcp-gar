@@ -1,0 +1,15 @@
+provider "google" {}
+
+provider "lacework" {}
+
+module "lacework_gar" {
+  source = "../../"
+
+  # configure the Lacework Artifact Registry integration
+  lacework_integration_name = "Example GAR integration"
+  registry_domain           = "us-docker.pkg.dev"
+  limit_by_tag              = "example*"
+  limit_by_label            = "example*"
+  limit_by_repos            = "foo,bar"
+  limit_num_imgs            = "10"
+}

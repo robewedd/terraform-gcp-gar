@@ -6,10 +6,13 @@
 #
 set -eou pipefail
 
-readonly project_name=terraform-<PROVIDER>-<NAME>
+readonly project_name=terraform-gcp-gar
 
 TEST_CASES=(
   examples/default
+  examples/environment-variables-gar
+  examples/existing-service-account-gar
+  examples/configure-lacework-gar-integration
 )
 
 log() {

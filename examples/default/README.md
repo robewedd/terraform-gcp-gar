@@ -1,6 +1,6 @@
-# Default Example
+# Default Lacework GAR Integration
 
-Every Terraform module must have one or more examples.
+This example creates a new least privilege service account to access the Google Artifact Registry of the project configured in the automationan and integrates it with Lacework.
 
 ```hcl
 terraform {
@@ -13,8 +13,13 @@ terraform {
 
 provider "lacework" {}
 
-module "lacework_module" {
-  source  = "lacework/<NAME>/<PROVIDER>"
-  version = "~> 0.1"
+provider "google" {}
+
+module "lacework_gar" {
+  source  = "lacework/gar/gcp"
+  version = "~> 1.0"
 }
 ```
+
+For detailed information on integrating Lacework with Google Artifact Registry see [Integrate Google Artifact Registry](https://support.lacework.com/hc/en-us/articles/1500009169561-Integrate-Google-Artifact-Registry)
+

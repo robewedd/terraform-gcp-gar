@@ -1,5 +1,7 @@
 provider "lacework" {}
 
-module "lacework_module" {
+provider "google" {}
+
+module "lacework_gar" {
   source = "../.."
 }
