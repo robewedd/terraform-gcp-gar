@@ -57,7 +57,7 @@ resource "time_sleep" "wait_time" {
 }
 
 resource "lacework_integration_gar" "default" {
-  name            = var.lacework_integration_name + "-" + local.project_id
+  name            = "${var.lacework_integration_name}-${local.project_id}"
   registry_domain = var.registry_domain
 
   credentials {
