@@ -76,7 +76,7 @@ resource "lacework_integration_gar" "default" {
     value = values(var.limit_by_label)
   }
   */
-  non_os_package_support = var.non_os_package_support  
+  non_os_package_support = var.non_os_package_support
 
   depends_on = [time_sleep.wait_time]
 }

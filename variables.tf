@@ -1,7 +1,7 @@
 variable "required_gar_apis" {
   type = map(any)
   default = {
-    resourcemanager   = "cloudresourcemanager.googleapis.com"
+    resourcemanager  = "cloudresourcemanager.googleapis.com"
     artifactregistry = "artifactregistry.googleapis.com"
   }
 }
@@ -55,13 +55,13 @@ variable "registry_domain" {
 }
 
 variable "limit_by_tags" {
-  type    = list(any)
-  default = []
+  type        = list(any)
+  default     = []
   description = "An image tag to limit the assessment of images with matching tag. If you specify limit_by_tag and limit_by_label limits, they function as an AND. Supported field input are mytext*mytext, mytext, mytext*, or mytext. Only one * wildcard is supported. Defaults to empty."
 }
 
 variable "limit_by_label" {
-  type    = list(any)
+  type = list(any)
   default = [{
     "" = ""
   }]
@@ -69,8 +69,8 @@ variable "limit_by_label" {
 }
 
 variable "limit_by_repositories" {
-  type    = list(any)
-  default = []
+  type        = list(any)
+  default     = []
   description = "A comma-separated list of repositories to assess.  Defaults to empty (will assess all repositories in the registry)."
 }
 
@@ -81,7 +81,7 @@ variable "limit_num_imgs" {
 }
 
 variable "non_os_package_support" {
-  type = bool
-  default = true
+  type        = bool
+  default     = true
   description = "Whether or not the integration should check non-os packages in the container for vulnerabilities.  Defaults to true"
 }

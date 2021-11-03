@@ -16,8 +16,8 @@ provider "lacework" {}
 provider "google" {}
 
 module "lacework_gar" {
-  source  = "lacework/gar/gcp"
-  version = "~> 1.0"
+  source    = "lacework/gar/gcp"
+  version   = "~> 0.1"
 }
 ```
 

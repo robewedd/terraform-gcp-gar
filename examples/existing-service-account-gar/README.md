@@ -32,9 +32,9 @@ provider "google" {}
 
 provider "lacework" {}
 
-module "lacework_svc_account" {
+module "lacework_gar" {
   source  = "lacework/gar/gcp"
-  version = "~> 1.0"
+  version = "~> 0.1"
 
   use_existing_service_account = true
   service_account_name         = "my-service-account"
