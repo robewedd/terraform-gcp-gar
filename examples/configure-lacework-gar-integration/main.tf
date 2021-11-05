@@ -11,7 +11,7 @@ module "lacework_gar" {
   registry_domain           = "us-docker.pkg.dev"
   limit_by_tags             = ["example*"]
   limit_by_label            = ["example*"]
-  limit_by_repositories     = ["foo","bar"]
+  limit_by_repositories     = ["foo", "bar"]
   limit_num_imgs            = "10"
   non_os_package_support    = true
 }

@@ -51,13 +51,13 @@ variable "wait_time" {
 variable "registry_domain" {
   type        = string
   default     = "us-docker.pkg.dev"
-  description = "The GAR domain, which specifies the location where you store the images. Supported domains should follow the format of (region|zone)-docker.pkg.dev. Defaults to us-docker.pkg.dev."
+  description = "The GAR domain, which specifies the location where you store the images. Supported domains should follow the format of (region|zone)-docker.pkg.dev"
 }
 
 variable "limit_by_tags" {
   type        = list(any)
   default     = []
-  description = "An image tag to limit the assessment of images with matching tag. If you specify limit_by_tag and limit_by_label limits, they function as an AND. Supported field input are mytext*mytext, mytext, mytext*, or mytext. Only one * wildcard is supported. Defaults to empty."
+  description = "An image tag to limit the assessment of images with matching tag. If you specify limit_by_tag and limit_by_label limits, they function as an AND. Supported field input are mytext*mytext, mytext, mytext*, or mytext. Only one * wildcard is supported"
 }
 
 variable "limit_by_label" {
@@ -65,23 +65,23 @@ variable "limit_by_label" {
   default = [{
     "" = ""
   }]
-  description = "An image label to limit the assessment of images with matching label. If you specify limit_by_tag and limit_by_label limits, they function as an AND.  Input is \"key\" = \"value\". Defaults to empty."
+  description = "An image label to limit the assessment of images with matching label. If you specify limit_by_tag and limit_by_label limits, they function as an AND.  Input is \"key\" = \"value\""
 }
 
 variable "limit_by_repositories" {
   type        = list(any)
   default     = []
-  description = "A comma-separated list of repositories to assess.  Defaults to empty (will assess all repositories in the registry)."
+  description = "A comma-separated list of repositories to assess. Defaults to empty (will assess all repositories in the registry)."
 }
 
 variable "limit_num_imgs" {
   type        = string
   default     = "5"
-  description = "The maximum number of newest container images to assess per repository. Must be one of 5, 10, or 15. Defaults to 5."
+  description = "The maximum number of newest container images to assess per repository. Must be one of 5, 10, or 15"
 }
 
 variable "non_os_package_support" {
   type        = bool
-  default     = true
-  description = "Whether or not the integration should check non-os packages in the container for vulnerabilities.  Defaults to true"
+  default     = false
+  description = "Whether or not the integration should check non-os packages in the container for vulnerabilities"
 }
