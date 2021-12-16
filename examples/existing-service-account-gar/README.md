@@ -35,6 +35,7 @@ provider "lacework" {}
 module "lacework_gar" {
   source  = "lacework/gar/gcp"
   version = "~> 0.1"
+  non_os_package_support = true
 
   use_existing_service_account = true
   service_account_name         = "my-service-account"
@@ -48,4 +49,4 @@ $ terraform init
 $ GOOGLE_CREDENTIALS=account.json GOOGLE_PROJECT=my-project terraform apply
 ```
 
-For detailed information on integrating Lacework with Google Artifact Registry see [Integrate Google Artifact Registry](https://support.lacework.com/hc/en-us/articles/1500009169561-Integrate-Google-Artifact-Registry)
+For detailed information on integrating Lacework with Google Artifact Registry see [Integrate Google Artifact Registry](https://docs.lacework.com/integrate-google-artifact-registry)

@@ -4,6 +4,7 @@ provider "lacework" {}
 
 module "lacework_gar" {
   source = "../../"
+  non_os_package_support = true
 
   # Provide an existing service account
   use_existing_service_account = true

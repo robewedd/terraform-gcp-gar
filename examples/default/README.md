@@ -17,9 +17,10 @@ provider "google" {}
 
 module "lacework_gar" {
   source    = "lacework/gar/gcp"
+  non_os_package_support = true
   version   = "~> 0.1"
 }
 ```
 
-For detailed information on integrating Lacework with Google Artifact Registry see [Integrate Google Artifact Registry](https://support.lacework.com/hc/en-us/articles/1500009169561-Integrate-Google-Artifact-Registry)
+For detailed information on integrating Lacework with Google Artifact Registry see [Integrate Google Artifact Registry](https://docs.lacework.com/integrate-google-artifact-registry)
 
