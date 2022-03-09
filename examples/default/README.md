@@ -17,7 +17,6 @@ provider "google" {}
 
 module "lacework_gar" {
   source    = "lacework/gar/gcp"
-  non_os_package_support = true
   version   = "~> 0.1"
 }
 ```
